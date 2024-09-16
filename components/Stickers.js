@@ -1,13 +1,46 @@
 "use client"
 import Script from 'next/script'
 import { useState, useEffect } from "react";
+import { fetchTemp1} from '@/utils'
 
 export default function Test() {
-  const defaultBgImage = 'https://ucarecdn.com/ec9b92c1-322a-49f8-94bd-bdad384ff2c4/picnict.webp';
-  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059983/gcou8xvn2pwzbs7n4z6b.webp';
+  const defaultBgImage = 'https://ucarecdn.com/89550036-3e93-49ec-af7e-ef9043cae270/ha.webp';
+  const hoverBgImage = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712060162/fyfvqc5ewr2aqccfsflp.webp';
+
+  const defaultBgImage1 = 'https://ucarecdn.com/3ae384bd-5669-462c-8a2a-0654fcf03067/oa.webp';
+  const hoverBgImage1 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/sa4bgzzhte0ycx5leejc.webp';
+
+  const defaultBgImage2 = 'https://ucarecdn.com/37cd4780-cfcc-4b01-a560-9e17ea673787/ofa.webp';
+  const hoverBgImage2 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/en6tiwnle1k7jed0jam8.webp';
+
+  const defaultBgImage3 = 'https://ucarecdn.com/aec52b90-b3cf-4840-92e8-c213c72f9e73/ma.webp';
+  const hoverBgImage3 = 'https://res.cloudinary.com/duppvjinz/image/upload/v1712059955/yrt9da39oomvcjklvi6c.webp';
 
 
-  const [bgImage, setBgImage] = useState(defaultBgImage); 
+  const [bgImage, setBgImage] = useState(defaultBgImage);
+  const [bgImage1, setBgImage1] = useState(defaultBgImage1);
+  const [bgImage2, setBgImage2] = useState(defaultBgImage2);
+  const [bgImage3, setBgImage3] = useState(defaultBgImage3);
+  const [allTemp, setTemp] = useState()
+  let b
+
+
+
+  const a = async () => {
+    b = await fetchTemp1("Picnic Items")
+    setTemp(b)
+  }
+  useEffect(() => {
+    a()
+  }, [])
+
+
+
+
+
+
+
+
 
   return (
     <>
@@ -49,7 +82,7 @@ export default function Test() {
                 "\n          #Collection--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5 {\n            --PT: 0px;\n            --PB: 0px;\n\n            --grid: repeat(3, minmax(0, 1fr));\n            --grid-tablet: repeat(3, minmax(0, 1fr));\n            --grid-small: repeat(2, minmax(0, 1fr));\n            --grid-mobile: repeat(2, minmax(0, 1fr));\n          }\n        "
             }}
           />
- 
+
 
           <section
             id="Collection--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5"
@@ -60,87 +93,130 @@ export default function Test() {
             <div className="grid-container">
               <div className="product-grid-outer">
                 <div
-                  className="product-grid product-grid--vertical   product-grid--borderless"
+                  className=" "
                   data-options='{"watchCSS": true, "cellAlign": "left", "pageDots": false, "prevNextButtons": true,  "wrapAround": false, "groupCells": true}'
                   data-arrow-position-middle=""
                 >
-                  <div
-                    className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                    data-product-grid-item=""
-                    data-slide={0}
-                    data-slide-index={0}
-                  >
-                    <div
-                      className="product-item__image double__image"
-                      data-product-image=""
-                    >
-                      <a
-                        className="product-link"
-                        href="/search?type=Picnic Supplies"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <div
-                          className="product-item__bg lazyload"
-                          style={{
-                            backgroundImage: `url('${bgImage}')`,
-                            backgroundSize: 'contain',
-                            backgroundPosition: 'center',
-                            width: '100%', // Adjust as needed
-                            height: '100%', // Adjust as needed
-                            backgroundRepeat: "no-repeat"
-                        }}  >
-                          &nbsp;
-                        </div> 
-                      </a>
+
+
+
+
+
+
+ 
+
+
+
+
+                  {allTemp && allTemp?.length > 0 ? (
+ <div className="grid-container">
+ {allTemp.map((item, index) => (
+   <div
+     key={index}
+     className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+     data-product-grid-item=""
+     data-slide={0}
+     data-slide-index={0}
+   >
+     <div
+       className="product-item__image double__image"
+       data-product-image=""
+     >
+       <a
+         className="product-link"
+         href={`/product?id=${item.id}`}
+         aria-label="Brothers Dopp Kit Duo . Brownish"
+         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+       >
+         <div
+           className="product-item__bg lazyload"
+           style={{
+             backgroundImage: `url('${item.img[0]}')`,
+             backgroundSize: 'contain',
+             backgroundPosition: 'center',
+             width: '100%', // Adjust as needed
+             height: '100%', // Adjust as needed
+             backgroundRepeat: "no-repeat"
+           }} >
+           &nbsp;
+         </div>
+       </a>
+     </div>
+     <div
+       className="product-information"
+       data-aos="fade"
+       data-aos-delay={0}
+       data-aos-duration={800}
+       data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
+       data-product-information=""
+     >
+       <a
+         className="product-link product-link--info"
+         href={`/product?id=${item.id}`}
+         aria-label="Brothers Dopp Kit Duo . Brownish"
+         data-grid-link="/products/brothers-dopp-kit-duo-brownish"
+       >
+         <p className="product__grid__title product__grid__element">
+           <span className="product__grid__title__default product__grid__element__default">
+             {item.title}
+           </span>
+         </p>
+         <p className="product__grid__title product__grid__element">
+           <span className="product__grid__title__default product__grid__element__default">
+             ${item.price}
+           </span>
+         </p>
+       </a>
+     </div>
+   </div>
+ ))}
+ <style jsx>{`
+   .grid-container {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 16px; /* Adjust the gap as needed */
+   }
+
+   @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+     .grid-container {
+       grid-template-columns: 1fr;
+     }
+   }
+
+   .product-item {
+     /* Your existing styles for product-item */
+   }
+   .product-item__image {
+     /* Your existing styles for product-item__image */
+   }
+   .product-link {
+     /* Your existing styles for product-link */
+   }
+   .product-item__bg {
+     /* Your existing styles for product-item__bg */
+   }
+   .product-information {
+     /* Your existing styles for product-information */
+   }
+   .product__grid__title {
+     /* Your existing styles for product__grid__title */
+   }
+ `}</style>
+</div>
+                  ) : (
+                    <div className='home___error-container'>
+                      <h2 className='text-black text-xl dont-bold'>...</h2>
+
                     </div>
-                    <div
-                      className="product-information"
-                      data-aos="fade"
-                      data-aos-delay={0}
-                      data-aos-duration={800}
-                      data-aos-anchor=".product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                      data-product-information=""
-                    >
-                      <a
-                        className="product-link product-link--info"
-                        href="/search?type=Picnic Supplies"
-                        aria-label="Brothers Dopp Kit Duo . Brownish"
-                        data-grid-link="/products/brothers-dopp-kit-duo-brownish"
-                      >
-                        <p className="product__grid__title product__grid__element">
-                          <span className="product__grid__title__default product__grid__element__default">
-                          Picnic Supplies
-                          </span>
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div
-                    className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                    data-product-grid-item=""
-                    data-slide={0}
-                    data-slide-index={0}
-                  >
-                     
-                  </div>
-                  <div
-                    className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                    data-product-grid-item=""
-                    data-slide={0}
-                    data-slide-index={0}
-                  >
-                     
-                  </div>
-                  <div
-                    className="product-item one-third medium--one-third small--one-half product-item--borderless product-item--centered product-item--outer-text product-item--has-quickbuy product-item--template--21602747875626__55a023da-d0ae-4d81-83e8-4589132b3ca5-1"
-                    data-product-grid-item=""
-                    data-slide={0}
-                    data-slide-index={0}
-                  >
-                  
-                     
-                  </div>
+                  )
+
+                  }
+
+
+
+
+
+
                 </div>
               </div>
             </div>

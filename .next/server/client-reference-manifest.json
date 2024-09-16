@@ -215,6 +215,30 @@
         "chunks": [],
         "async": false
       }
+    },
+    "(app-client)/./app/shop/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/shop/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/search/page.jsx": {
+      "*": {
+        "id": "(sc_client)/./app/search/page.jsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
+    },
+    "(app-client)/./app/about/page.tsx": {
+      "*": {
+        "id": "(sc_client)/./app/about/page.tsx",
+        "name": "*",
+        "chunks": [],
+        "async": false
+      }
     }
   },
   "edgeSSRModuleMapping": {},
@@ -570,6 +594,30 @@
         "app/layout:static/chunks/app/layout.js"
       ],
       "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page.jsx": {
+      "id": "(app-client)/./app/shop/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/shop/page:static/chunks/app/shop/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page.jsx": {
+      "id": "(app-client)/./app/search/page.jsx",
+      "name": "*",
+      "chunks": [
+        "app/search/page:static/chunks/app/search/page.js"
+      ],
+      "async": false
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\page.tsx": {
+      "id": "(app-client)/./app/about/page.tsx",
+      "name": "*",
+      "chunks": [
+        "app/about/page:static/chunks/app/about/page.js"
+      ],
+      "async": false
     }
   },
   "entryCSSFiles": {
@@ -581,6 +629,10 @@
       "files": [
         "static/css/app/page.css"
       ]
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
+      "modules": [],
+      "files": []
     },
     "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\layout": {
       "modules": [
@@ -594,7 +646,19 @@
         "static/css/app/layout.css"
       ]
     },
-    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\loading": {
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\shop\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\search\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\page": {
+      "modules": [],
+      "files": []
+    },
+    "C:\\Users\\abc\\Desktop\\Hadi\\My Bussiness\\anazon\\anazon\\app\\about\\loading": {
       "modules": [],
       "files": []
     }
