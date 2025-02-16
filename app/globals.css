@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
+ 
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -323,10 +325,8 @@ a:hover {
 .syw-usps {
   background: transparent !important;
 }
+ 
 
-.productTabs__tabContent__image_tab_4 {
-  background-image: url("api/proxy?url=https://ucarecdn.com/fd4a6f3f-d8bc-41a2-b6d3-163a4af8d178/picnic1.webp");
-}
 
 
 .klaviyo_submit_button {

@@ -188,6 +188,12 @@ const Body = () => {
       />
 
 
+<style
+  dangerouslySetInnerHTML={{
+    __html:
+      '\n  .productTabs__tabContent__image_tab_4 {\n  background-image: url("api/proxy?url=https://ucarecdn.com/fd4a6f3f-d8bc-41a2-b6d3-163a4af8d178/picnic1.webp");\n}\n'
+  }}
+/>
 
 
 
