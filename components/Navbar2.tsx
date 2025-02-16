@@ -218,7 +218,7 @@ function NavBar() {
             data-auto-id="true"
             id="page-header-homepage-1"
           >
-            <img src="https://ucarecdn.com/13ff6806-3fbb-48c9-832b-c8a76aaedf2b/logo.png" alt="" width={100} />
+            <img src="api/proxy?url=https://ucarecdn.com/13ff6806-3fbb-48c9-832b-c8a76aaedf2b/logo.png" alt="" width={100} />
           </a>
           <button id='hamburger' className="hamburger xl:pointer-fine:br_invisible" onClick={handleClick}>
             <span />
@@ -350,7 +350,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://ucarecdn.com/765fdb37-952f-493d-9519-24ecbbafda39/app1.webp?auto=format&fit=max"
+                              src="api/proxy?url=https://ucarecdn.com/765fdb37-952f-493d-9519-24ecbbafda39/app1.webp?auto=format&fit=max"
                             />
                           </figure>
                           <span>
@@ -370,7 +370,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://ucarecdn.com/99b65eec-388e-4333-aacb-7127191aea8d/wear1.webp?auto=format&fit=max"
+                              src="api/proxy?url=https://ucarecdn.com/99b65eec-388e-4333-aacb-7127191aea8d/wear1.webp?auto=format&fit=max"
                             />
                           </figure>
                           <span>
@@ -390,7 +390,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://ucarecdn.com/701a7be5-3fad-44f2-a54d-77d7064d24ae/house1.webpp?auto=format&fit=max"
+                              src="api/proxy?url=https://ucarecdn.com/701a7be5-3fad-44f2-a54d-77d7064d24ae/house1.webpp?auto=format&fit=max"
                             />
                           </figure>
                           <span>
@@ -410,7 +410,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://ucarecdn.com/fd4a6f3f-d8bc-41a2-b6d3-163a4af8d178/picnic1.webp"
+                              src="api/proxy?url=https://ucarecdn.com/fd4a6f3f-d8bc-41a2-b6d3-163a4af8d178/picnic1.webp"
                             />
                           </figure>
                           <span>
@@ -430,7 +430,7 @@ function NavBar() {
                               className="br_block br_w-full br_h-full br_rounded-md br_object-contain br_object-center"
                               loading="lazy"
                               sizes="100vw"
-                              src="https://ucarecdn.com/5a623bba-e4be-4bf2-b638-d9e095e12908/all.webp"
+                              src="api/proxy?url=https://ucarecdn.com/5a623bba-e4be-4bf2-b638-d9e095e12908/all.webp"
                             />
                           </figure>
                           <span>
